@@ -7,7 +7,82 @@ body {
   padding: 0;
 }
 
-/* Navbar */
+/* Estilos de contenedores de login, registro y reset */
+.login, .register, .reset {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.login__container, .register__container, .reset__container {
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Input groups */
+.login__input-group, .register__input-group, .reset__input-group {
+  margin-bottom: 15px;
+}
+
+.login__input, .register__input, .reset__input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.login__input:focus, .register__input:focus, .reset__input:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+/* Botones generales */
+.login__button, .register__button, .reset__button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.login__button:hover, .register__button:hover, .reset__button:hover {
+  background-color: #357ab8;
+}
+
+/* Botón para Google */
+.login__button--google, .register__button--google, .reset__button--google {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #db4437;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.login__button--google:hover, .register__button--google:hover, .reset__button--google:hover {
+  background-color: #c33c2d;
+}
+
+.login__links, .register__links, .reset__links {
+  text-align: center;
+}
+
+/* Navbar personalizado */
 .navbar {
   background-color: #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -29,7 +104,7 @@ body {
   color: #4a90e2;
 }
 
-/* Contenedor principal */
+/* Contenedor general */
 .container {
   margin-top: 50px;
   padding: 20px;
@@ -38,70 +113,7 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* BEM estructura para login, registro, etc. */
-.login, .register, .reset {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f5f5f5;
-}
-
-.login__container, .register__container, .reset__container {
-  width: 100%;
-  max-width: 400px;
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.login__input-group, .register__input-group, .reset__input-group {
-  margin-bottom: 15px;
-}
-
-.login__input, .register__input, .reset__input {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
-
-.login__input:focus, .register__input:focus, .reset__input:focus {
-  border-color: #4a90e2;
-  outline: none;
-}
-
-.login__button, .register__button, .reset__button {
-  width: 100%;
-  padding: 10px;
-  background-color: #4a90e2;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-}
-
-.login__button:hover, .register__button:hover, .reset__button:hover {
-  background-color: #357ab8;
-}
-
-.login__links, .register__links, .reset__links {
-  text-align: center;
-  margin-top: 10px;
-}
-
-.login__links a, .register__links a, .reset__links a {
-  color: #4a90e2;
-}
-
-.login__links a:hover, .register__links a:hover, .reset__links a:hover {
-  color: #357ab8;
-}
-
-/* Estilos personalizados */
+/* Estilo para el adminSection */
 #adminSection {
   margin-top: 30px;
 }
@@ -118,7 +130,8 @@ body {
 
 /* Responsivo */
 @media (max-width: 768px) {
-  .login__container, .register__container, .reset__container {
+  .login, .register, .reset {
+    margin: 50px auto;
     padding: 15px;
   }
 
@@ -130,56 +143,4 @@ body {
   .nav-link {
     font-size: 1rem;
   }
-
-  #adminSection table {
-    font-size: 14px;
-  }
-}
-
-/* Botones */
-.btn-primary,
-.btn-secondary {
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-}
-
-.btn-primary {
-  background-color: #4a90e2;
-  border: none;
-  color: white;
-}
-
-.btn-primary:hover {
-  background-color: #357ab8;
-}
-
-.btn-secondary {
-  background-color: #f39c12;
-  border: none;
-  color: white;
-}
-
-.btn-secondary:hover {
-  background-color: #e67e22;
-}
-
-/* Imagenes en el preview */
-#imagePreviewContainer img {
-  width: 100px;
-  height: 100px;
-  margin: 5px;
-  cursor: pointer;
-  border: 2px solid transparent;
-  transition: transform 0.3s ease;
-}
-
-#imagePreviewContainer img.selected {
-  border-color: #4a90e2;
-}
-
-#imagePreviewContainer img:hover {
-  transform: scale(1.05);
-  border-color: #357ab8;
 }
