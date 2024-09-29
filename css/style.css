@@ -1,92 +1,185 @@
+/* Estilos Generales */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7f6;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #4a90e2;
+}
+
+.nav-link {
+  font-size: 1.1rem;
+  color: #333;
+  margin-left: 10px;
+}
+
+.nav-link:hover {
+  color: #4a90e2;
+}
+
+/* Contenedor principal */
+.container {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 /* BEM estructura para login, registro, etc. */
 .login, .register, .reset {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f5f5f5;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.login__container, .register__container, .reset__container {
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login__input-group, .register__input-group, .reset__input-group {
+  margin-bottom: 15px;
+}
+
+.login__input, .register__input, .reset__input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.login__input:focus, .register__input:focus, .reset__input:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+.login__button, .register__button, .reset__button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4a90e2;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.login__button:hover, .register__button:hover, .reset__button:hover {
+  background-color: #357ab8;
+}
+
+.login__links, .register__links, .reset__links {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.login__links a, .register__links a, .reset__links a {
+  color: #4a90e2;
+}
+
+.login__links a:hover, .register__links a:hover, .reset__links a:hover {
+  color: #357ab8;
+}
+
+/* Estilos personalizados */
+#adminSection {
+  margin-top: 30px;
+}
+
+#adminSection table {
+  margin-top: 20px;
+}
+
+/* Personaliza los márgenes del modal */
+.modal-dialog {
+  max-width: 500px;
+  margin: 1.75rem auto;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
   .login__container, .register__container, .reset__container {
-    width: 100%;
-    max-width: 400px;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .login__input-group, .register__input-group, .reset__input-group {
-    margin-bottom: 15px;
-  }
-  
-  .login__input, .register__input, .reset__input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
-  
-  .login__button, .register__button, .reset__button {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .login__links, .register__links, .reset__links {
-    text-align: center;
-  }
-/* BEM estructura para el registro */
-.register {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f5f5f5;
-  }
-  
-  .register__container {
-    width: 100%;
-    max-width: 400px;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .register__input-group {
-    margin-bottom: 15px;
-  }
-  
-  .register__input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
-  
-  .register__button {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .register__links {
-    text-align: center;
+    padding: 15px;
   }
 
-  /* Estilos personalizados */
-#adminSection {
+  .container {
     margin-top: 30px;
+    padding: 15px;
   }
-  
+
+  .nav-link {
+    font-size: 1rem;
+  }
+
   #adminSection table {
-    margin-top: 20px;
+    font-size: 14px;
   }
-  
-  /* Personaliza los márgenes del modal */
-.modal-dialog {
-    max-width: 500px;
-    margin: 1.75rem auto;
-  }
-  
+}
+
+/* Botones */
+.btn-primary,
+.btn-secondary {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #4a90e2;
+  border: none;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #357ab8;
+}
+
+.btn-secondary {
+  background-color: #f39c12;
+  border: none;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #e67e22;
+}
+
+/* Imagenes en el preview */
+#imagePreviewContainer img {
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform 0.3s ease;
+}
+
+#imagePreviewContainer img.selected {
+  border-color: #4a90e2;
+}
+
+#imagePreviewContainer img:hover {
+  transform: scale(1.05);
+  border-color: #357ab8;
+}

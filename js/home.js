@@ -26,8 +26,17 @@ $(document).ready(function() {
         }
       });
     } else {
-      window.location.href = 'index.html'; // Redirigir si no está autenticado
+      window.location.href = 'login.html'; // Redirigir si no está autenticado
     }
+  });
+
+  // Funcionalidad de cerrar sesión
+  $('#logoutBtn').click(function() {
+    auth.signOut().then(() => {
+      window.location.href = 'index.html'; // Redirigir al login después de cerrar sesión
+    }).catch((error) => {
+      alert('Error al cerrar sesión: ' + error.message);
+    });
   });
 
   // Actualizar los datos del perfil de usuario

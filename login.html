@@ -7,19 +7,26 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
-  <title>Recuperar Contraseña</title>
+  <title>Login</title>
 </head>
 <body>
-  <div class="reset">
-    <div class="reset__container">
-      <form id="resetPasswordForm">
-        <h2 class="reset__title">Recuperar Contraseña</h2>
-        <div class="reset__input-group">
-          <input type="email" id="resetEmail" class="reset__input" placeholder="Correo electrónico" required>
+  <div class="login">
+    <div class="login__container">
+      <form id="loginForm">
+        <h2 class="login__title">Iniciar Sesión</h2>
+        <div class="login__input-group">
+          <input type="email" id="loginEmail" class="login__input" placeholder="Correo electrónico" required>
         </div>
-        <button type="submit" class="btn btn-primary reset__button">Enviar</button>
-        <p class="reset__links">
-          <a href="login.html">Volver al Login</a>
+        <div class="login__input-group">
+          <input type="password" id="loginPassword" class="login__input" placeholder="Contraseña" required>
+        </div>
+        <button type="submit" class="btn btn-primary login__button">Ingresar</button>
+        <button id="googleLogin" type="button" class="btn btn-danger login__button">
+          <i class="fab fa-google"></i> Ingresar con Google
+        </button>
+        <p class="login__links">
+          <a href="register.html">Registrarse</a> |
+          <a href="reset-password.html">Olvidaste tu contraseña?</a>
         </p>
       </form>
     </div>
