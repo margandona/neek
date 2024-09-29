@@ -128,7 +128,7 @@ $('#googleLogin, #googleRegister').click(function() {
       auth.sendPasswordResetEmail(email)
         .then(() => {
           alert('Correo de recuperación enviado');
-          window.location.href = 'index.html';  // Redirigir al login
+          window.location.href = 'login.html';  // Redirigir al login
         })
         .catch((error) => {
           alert('Error al enviar correo de recuperación: ' + error.message);

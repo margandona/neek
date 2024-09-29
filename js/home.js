@@ -33,7 +33,7 @@ $(document).ready(function() {
   // Funcionalidad de cerrar sesión
   $('#logoutBtn').click(function() {
     auth.signOut().then(() => {
-      window.location.href = 'index.html'; // Redirigir al login después de cerrar sesión
+      window.location.href = 'index.html'; // Redirigir al index después de cerrar sesión
     }).catch((error) => {
       alert('Error al cerrar sesión: ' + error.message);
     });
