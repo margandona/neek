@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <title>Registro</title>
+</head>
+<body>
+  <div class="register">
+    <div class="register__container">
+      <form id="registerForm">
+        <h2 class="register__title">Registro</h2>
+        <!-- Campo para el nombre -->
+        <div class="register__input-group">
+          <input type="text" id="nombre" class="register__input" placeholder="Nombre" required>
+        </div>
+        <!-- Campo para el apellido -->
+        <div class="register__input-group">
+          <input type="text" id="apellido" class="register__input" placeholder="Apellido" required>
+        </div>
+        <!-- Campo para el email -->
+        <div class="register__input-group">
+          <input type="email" id="email" class="register__input" placeholder="Correo electrónico" required>
+        </div>
+        <!-- Campo para el teléfono -->
+        <div class="register__input-group">
+          <input type="text" id="telefono" class="register__input" placeholder="Teléfono">
+        </div>
+        <!-- Campo para el país -->
+        <div class="register__input-group">
+          <input type="text" id="pais" class="register__input" placeholder="País">
+        </div>
+        <!-- Campo para la ciudad -->
+        <div class="register__input-group">
+          <input type="text" id="ciudad" class="register__input" placeholder="Ciudad">
+        </div>
+        <!-- Campo para la contraseña -->
+        <div class="register__input-group">
+          <input type="password" id="password" class="register__input" placeholder="Contraseña" required>
+        </div>
+        <!-- Botón para registrarse -->
+        <button type="submit" class="btn btn-primary register__button">Registrarse</button>
+        <!-- Botón para registrarse con Google -->
+        <button id="googleRegister" type="button" class="btn btn-danger register__button">
+          <i class="fab fa-google"></i> Registrarse con Google
+        </button>
+        <!-- Enlace hacia el login -->
+        <p class="register__links">
+          <a href="index.html">Ya tienes una cuenta? Iniciar Sesión</a>
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+  <script src="js/firebase-config.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
